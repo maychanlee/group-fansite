@@ -1,0 +1,35 @@
+@font-face{
+    font-family: "Last-Christmas";
+    src: url("../assets/LastChristmas_PERSONAL_USE_ONLY.otf");
+}
+
+body {
+    cursor: url("https://cdn.custom-cursor.com/db/7690/santa-with-present-cursor.png") 0 10, auto ;
+    background-image: url("https://applescoop.org/image/wallpapers/mac/xmas-christmas-santa-claus-sleigh-tree-forest-30-10-2024-1730273778-hd-wallpaper.webp");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+h2 {
+    font-family: "Last-Christmas";
+    font-size: 3em;
+    color: rgb(198, 46, 46);
+    text-shadow: rgba(255, 253, 214, 0.622) 0 0 45px;
+}
+
+ul {
+
+    list-style: circle;
+    text-align: left;
+}
+
+li {
+    padding-bottom: 20px;
+}
+
+.fun-facts {
+    margin-left: 100px;
+    margin-right: 100px;
+    color: aliceblue;
+}
