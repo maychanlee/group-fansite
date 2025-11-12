@@ -1,6 +1,9 @@
 main {
     background-color: #111;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .banner {
@@ -50,7 +53,6 @@ main {
 }
 
 /* animation */
-
 .slide.christmas { 
     animation-delay: 0s; 
 }
@@ -60,7 +62,7 @@ main {
 }
 
 .slide.new-year {
-    animation-delay: 6s;
+    animation-delay: 8s;
 }
 
 @keyframes fade {
@@ -69,5 +71,4 @@ main {
     30% { opacity: 1; }
     40% { opacity: 0; }
     100% { opacity: 0; }
-
 }
