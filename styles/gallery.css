@@ -35,12 +35,6 @@ h4 {
     margin-left:  0px;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: 'Helvetica Neue', sans-serif;
     /* allow scrolling so footer can be reached when slideshow fills the viewport */
