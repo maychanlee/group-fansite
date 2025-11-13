@@ -90,8 +90,11 @@ body {
     border-radius: 12px;
     backdrop-filter: blur(3px);
     /* keep text above the slide content and let the animation persist its end state */
-    z-index: 2;
-    animation: textfade 20s infinite;
+        z-index: 2;
+        /* hide non-visible captions from the accessibility tree and prevent them intercepting clicks */
+        visibility: hidden;
+        pointer-events: none;
+        animation: textfade 20s infinite;
     animation-fill-mode: both;
 }
 
@@ -136,9 +139,9 @@ body {
   /* Text fade to match slides */
 @keyframes textfade {
      /* text appears shortly after the background fades in and disappears before the cycle end */
-    0%, 5% { opacity: 0; transform: translate(-50%, -48%); }
-    7%, 20% { opacity: 1; transform: translate(-50%, -50%); }
-    25%, 100% { opacity: 0; transform: translate(-50%, -52%); }
+    0%, 5% { opacity: 0; transform: translate(-50%, -48%); visibility: hidden; }
+    7%, 20% { opacity: 1; transform: translate(-50%, -50%); visibility: visible; pointer-events: auto; }
+    25%, 100% { opacity: 0; transform: translate(-50%, -52%); visibility: hidden; pointer-events: none; }
 }
 
   /* Ensure the footer sits above slides if needed */
