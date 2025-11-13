@@ -1,0 +1,119 @@
+img {
+  width: 275px;
+  height: 183px;
+}
+
+p {
+    margin-top: 0px;
+    margin-left:  -200px;
+}
+
+h4 {
+    margin-top: 0px;
+    margin-left:  0px;
+}
+
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Helvetica Neue', sans-serif;
+    overflow: hidden;
+  }
+
+  .slideshow {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+
+  /* Each slide fills the viewport */
+  .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* Keep slide opaque; the visible background is provided by the ::before pseudo-element
+       which we animate. This prevents stacking-context issues so .text can sit above. */
+    overflow: hidden;
+  }
+
+  /* Background layer for each slide; animate its opacity instead of the slide itself */
+  .slide::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    z-index: 1;
+    animation: fade 20s infinite;
+    animation-fill-mode: both;
+  }
+
+  /* Overlay text */
+  .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 2rem 3rem;
+    border-radius: 12px;
+    backdrop-filter: blur(3px);
+    /* keep text above the slide content and let the animation persist its end state */
+    z-index: 1;
+    animation: textfade 20s infinite;
+    animation-fill-mode: both;
+  }
+
+  /* Images */
+/* Background images and individual animation delays for the ::before layer */
+.slide:nth-child(1)::before {
+    background-image: url('https://thatadventurer.co.uk/wp-content/uploads/2020/09/leavenworth-christmas-festival-.jpg');
+    animation-delay: 0s;
+  }
+
+.slide:nth-child(2)::before {
+    background-image: url('https://static-cdn.toi-media.com/www/uploads/2018/12/F171220MHFF07.jpg');
+    animation-delay: 5s;
+  }
+
+.slide:nth-child(3)::before {
+    background-image: url('https://www.travelalaska.com/sites/default/files/inline-images/%40jennyksf_1.jpg');
+    animation-delay: 10s;
+  }
+.slide:nth-child(4)::before {
+    background-image: url('https://media.timeout.com/images/105730957/image.jpg');
+    animation-delay: 15s;
+  }
+
+  /* Sync text animations with their parent slide so each caption appears when its slide is visible */
+  .slide:nth-child(1) .text { animation-delay: 0s; }
+  .slide:nth-child(2) .text { animation-delay: 5s; }
+  .slide:nth-child(3) .text { animation-delay: 10s; }
+  .slide:nth-child(4) .text { animation-delay: 15s; }
+
+  /* Fade animation for slides */
+  @keyframes fade {
+     /* for a 20s cycle (4 slides × 5s):
+       ensure each slide's visible window ends at delay + 5s so it doesn't overlap the next cycle */
+     0% { opacity: 0; }
+     5% { opacity: 1; }
+     20% { opacity: 1; }
+     25% { opacity: 0; }
+     100% { opacity: 0; }
+  }
+
+  /* Text fade to match slides */
+  @keyframes textfade {
+     /* text appears shortly after the background fades in and disappears before the cycle end */
+     0%, 5% { opacity: 0; transform: translate(-50%, -48%); }
+     7%, 20% { opacity: 1; transform: translate(-50%, -50%); }
+     25%, 100% { opacity: 0; transform: translate(-50%, -52%); }
+  }
