@@ -5,16 +5,18 @@
 
 body {
     cursor: url("https://cdn.custom-cursor.com/db/15975/32/holidays-hanukkah-jug-and-candles-pointer.png") 0 10, auto ;
-    background-image: url("https://img.freepik.com/free-vector/gradient-background-hanukkah-celebration-with-menorah-presents_23-2150907726.jpg?t=st=1762982729~exp=1762986329~hmac=3f2cd92e5d47da2f25ca5e76c9fb2323be4056303e238716bfb8c0b5e32082ce&w=2000");
+    background-image: url("https://images.template.net/265867/Hanukkah-Day-Background-edit-online.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
+    font-family: "Last-Christmas";
+    font-size: 1em;
 }
 
 h2 {
     font-family: "Last-Christmas";
     font-size: 3em;
-    color: rgb(255, 204, 0);
+    color: rgb(255, 255, 255);
     text-shadow: rgba(255, 253, 214, 0.622) 0 0 45px;
 }
 
@@ -26,6 +28,7 @@ ul {
 
 li {
     padding-bottom: 20px;
+    text-align: left;
 }
 
 .fun-facts {
