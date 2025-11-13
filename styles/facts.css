@@ -84,6 +84,7 @@ main {
 .card-link {
     font-weight: bold;
     text-decoration: none;
+    color:#ff0000;
 }
 
 .facts-grid:hover .card {

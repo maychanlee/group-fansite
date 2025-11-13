@@ -22,13 +22,12 @@ body {
     text-align: center;
 }
 
-ul {
-
+.christmas-facts-list {
     list-style: circle;
     text-align: left;
 }
 
-li {
+.christmas-facts-list li {
     padding-bottom: 20px;
 }
 

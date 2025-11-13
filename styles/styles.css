@@ -5,6 +5,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  cursor: url("../img/snowflake.svg") 16 16, auto;
 }
 
 header {
@@ -12,9 +13,8 @@ header {
   justify-content: space-between;
   align-items: center;
   text-align: left;
-  background-color: #f4f4f4;
+  background-color: #4c4b46;
   padding: 0.3rem 1rem;
-  border-bottom: 1px solid #ddd;
 }
 
 .logo-title {
@@ -25,11 +25,8 @@ header {
 header h1{
   font-size: 1.3rem;
   font-family: cursive, sans-serif;
-  color: #d32f2f;
+  color: #ff0000;
   margin-left: 5px;
-  text-shadow: 
-    1px 1px 0 #f96125,
-    0 0 1px #ffffff88;
 }
 
 .logo {
@@ -47,12 +44,15 @@ header h1{
   gap: 1.2rem;
 }
 
-a {
+.nav-link {
+  color: white;
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
+.nav-link:hover,
+.nav-link:focus {
+  color: #ff0000;
+  text-decoration: none;
 }
 
 main {
@@ -60,10 +60,9 @@ main {
 }
 
 footer {
-  background-color: #f4f4f4;
+  background-color: #4c4b46;;
   padding: 1rem;
   text-align: center;
-  border-top: 1px solid #ddd;
 }
 
 

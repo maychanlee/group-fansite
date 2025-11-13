@@ -139,8 +139,8 @@ body {
 }
 
   /* Ensure the footer sits above slides if needed */
-footer {
+/* footer {
     position: relative;
     z-index: 3;
     background: transparent;
-}
+} */
