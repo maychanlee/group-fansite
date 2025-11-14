@@ -1,11 +1,3 @@
-/* * {border: 1px solid red;} */
-
- .container {
-    display: flex;
-    flex-direction: column;
-    }
-
-
 h2 {font-family: 'Apple Chancery', cursive;
     font-size: 50px;
     color: rgb(0, 0, 0);
@@ -14,10 +6,8 @@ h2 {font-family: 'Apple Chancery', cursive;
 p { font-family: 'Comic Sans MS', cursive, sans-serif;
     font-size: 20px;
     color: rgb(0, 0, 0);
-    /* margin: 10px; */
     text-align: center;
     margin-bottom: 0px;
-
     }
 
 body {cursor: url("https://cdn.custom-cursor.com/db/7746/32/new-year-clock-and-firework-cursor.png") 0 10, auto;
@@ -26,7 +16,6 @@ body {cursor: url("https://cdn.custom-cursor.com/db/7746/32/new-year-clock-and-f
     background-repeat: no-repeat;
     background-attachment: fixed;
     }
-
 
 div {    
     font-family: 'Arial Black', sans-serif;
@@ -44,15 +33,25 @@ div {
 
 .sub-background {  
     margin-top: 50px;
-    border: 5px solid rgb(222, 48, 39);
-    border-radius: 15px;
-    background-color: rgba(207, 164, 164, 0.494);
-    box-shadow: 0 0 15px rgb(225, 62, 33);
     }
 
 ol { list-style-type: none;
 }
 
-.facts-list li {
-    margin-top: 0px;
+.twinkle-text {
+    font-size: 3em; 
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de; /* Initial glow */
+    animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+    0% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
     }
+    50% {
+        text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff, 0 0 8px #ff00de, 0 0 10px #ff00de, 0 0 12px #ff00de, 0 0 14px #ff00de, 0 0 16px #ff00de;
+    }
+    100% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
+    }
+}
