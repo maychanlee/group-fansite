@@ -17,7 +17,7 @@ body {cursor: url("https://cdn.custom-cursor.com/db/7746/32/new-year-clock-and-f
     background-attachment: fixed;
     }
 
-div {    
+.facts-list-description {    
     font-family: 'Arial Black', sans-serif;
     font-size: 20px;
     color: rgb(25, 9, 10);
