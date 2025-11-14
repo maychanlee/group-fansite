@@ -5,40 +5,34 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  cursor: url("../img/snowflake.svg") 16 16, auto;
 }
 
 header {
-  background-color: #f4f4f4;
-  padding: 1rem;
-  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  background-color: #4c4b46;
+  padding: 0.3rem 1rem;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
 }
 
 header h1{
-  font-size: 2.2rem;
+  font-size: 1.3rem;
   font-family: cursive, sans-serif;
-  color: #d32f2f;
-  text-shadow: 
-    1px 1px 0 #f9a825,
-    0 0 3px #ffffff88;
+  color: #ff0000;
+  margin-left: 5px;
 }
 
-main {
-  flex: 1;
-}
-
-footer {
-  background-color: #f4f4f4;
-  padding: 1rem;
-  text-align: center;
-  border-top: 1px solid #ddd;
-}
-
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+.logo {
+  width: 30px;
+  height: auto;
+  display: block;
 }
 
 .nav-menu {
@@ -49,3 +43,26 @@ a:hover {
   justify-content: center;
   gap: 1.2rem;
 }
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: #ff0000;
+  text-decoration: none;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  background-color: #4c4b46;;
+  padding: 1rem;
+  text-align: center;
+}
+
+

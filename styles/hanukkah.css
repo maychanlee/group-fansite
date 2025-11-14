@@ -1,0 +1,46 @@
+@font-face{
+    font-family: "Last-Christmas";
+    src: url("../assets/LastChristmas_PERSONAL_USE_ONLY.otf");
+}
+
+body {
+    cursor: url("https://cdn.custom-cursor.com/db/15975/32/holidays-hanukkah-jug-and-candles-pointer.png") 0 10, auto ;
+    background-image: url("https://images.template.net/265867/Hanukkah-Day-Background-edit-online.jpg");
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    font-size: 1em;
+}
+
+h2 {
+    font-family: "Last-Christmas";
+    font-size: 3em;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(255, 253, 214, 0.622) 0 0 45px;
+}
+
+ul {
+
+    list-style: circle;
+    text-align: left;
+}
+
+.fun-facts li {
+    padding-bottom: 20px;
+    text-align: left;
+}
+
+.fun-facts {
+    margin-left: 100px;
+    margin-right: 100px;
+    color: rgb(255, 255, 255);
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+}
