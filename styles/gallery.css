@@ -9,7 +9,6 @@ p {
     text-align: center;
 }
 
-/* Anchor/link colors inside slideshow captions and slides */
 .text a,
 .slide a,
 .slideshow a {
@@ -37,28 +36,22 @@ h4 {
 
 body {
     font-family: 'Helvetica Neue', sans-serif;
-    /* allow scrolling so footer can be reached when slideshow fills the viewport */
     overflow: auto;
 }
 
 .slideshow {
     position: relative;
     width: 100%;
-    /* slideshow fills the viewport but allow content (footer) below it */
     min-height: 100vh;
 }
 
-  /* Each slide fills the viewport */
 .slide {
     position: absolute;
     width: 100%;
     height: 100%;
-    /* Keep slide opaque; the visible background is provided by the ::before pseudo-element
-       which we animate. This prevents stacking-context issues so .text can sit above. */
     overflow: hidden;
 }
 
-  /* Background layer for each slide; animate its opacity instead of the slide itself */
 .slide::before {
     content: "";
     position: absolute;
@@ -71,7 +64,6 @@ body {
     animation-fill-mode: both;
 }
 
-  /* Overlay text */
 .text {
     position: absolute;
     top: 50%;
@@ -83,17 +75,13 @@ body {
     padding: 2rem 3rem;
     border-radius: 12px;
     backdrop-filter: blur(3px);
-    /* keep text above the slide content and let the animation persist its end state */
-        z-index: 2;
-        /* hide non-visible captions from the accessibility tree and prevent them intercepting clicks */
-        visibility: hidden;
-        pointer-events: none;
-        animation: textfade 20s infinite;
+    z-index: 2;
+    visibility: hidden;
+    pointer-events: none;
+    animation: textfade 20s infinite;
     animation-fill-mode: both;
 }
 
-  /* Images */
-/* Background images and individual animation delays for the ::before layer */
 .slide:nth-child(1)::before {
     background-image: url('https://thatadventurer.co.uk/wp-content/uploads/2020/09/leavenworth-christmas-festival-.jpg');
     animation-delay: 0s;
@@ -113,16 +101,12 @@ body {
     animation-delay: 15s;
 }
 
-  /* Sync text animations with their parent slide so each caption appears when its slide is visible */
 .slide:nth-child(1) .text { animation-delay: 0s; }
 .slide:nth-child(2) .text { animation-delay: 5s; }
 .slide:nth-child(3) .text { animation-delay: 10s; }
 .slide:nth-child(4) .text { animation-delay: 15s; }
 
-  /* Fade animation for slides */
 @keyframes fade {
-    /* for a 20s cycle (4 slides × 5s):
-       ensure each slide's visible window ends at delay + 5s so it doesn't overlap the next cycle */
     0% { opacity: 0; }
     5% { opacity: 1; }
     20% { opacity: 1; }
@@ -130,17 +114,8 @@ body {
     100% { opacity: 0; }
 }
 
-  /* Text fade to match slides */
 @keyframes textfade {
-     /* text appears shortly after the background fades in and disappears before the cycle end */
     0%, 5% { opacity: 0; transform: translate(-50%, -48%); visibility: hidden; }
     7%, 20% { opacity: 1; transform: translate(-50%, -50%); visibility: visible; pointer-events: auto; }
     25%, 100% { opacity: 0; transform: translate(-50%, -52%); visibility: hidden; pointer-events: none; }
 }
-
-  /* Ensure the footer sits above slides if needed */
-/* footer {
-    position: relative;
-    z-index: 3;
-    background: transparent;
-} */
